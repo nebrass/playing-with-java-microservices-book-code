@@ -23,6 +23,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
         <spring-cloud.version>Finchley.SR1</spring-cloud.version>
+        <spring.cloud.k8s.version>0.3.0.RELEASE</spring.cloud.k8s.version>
     </properties>
 
     <dependencies>
@@ -49,10 +50,11 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
-        </dependency>
+        </dependency>  
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
+            <artifactId>spring-cloud-kubernetes-discovery</artifactId>
+            <version>${spring.cloud.k8s.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>

@@ -1,6 +1,28 @@
 spring:
-  cloud:
-    config:
-      uri: http://localhost:8888
   application:
     name: gateway-service
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          url-expression: "'http://'+serviceId"
+server:
+  port: 8080
+logging:
+  level:
+    org.springframework.cloud.gateway: TRACE
+    org.springframework.cloud.loadbalancer: TRACE
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+zuul:
+  routes:
+    customer:
+      path: /customer/**
+    product:
+      path: /product/**
+    order:
+      path: /order/**

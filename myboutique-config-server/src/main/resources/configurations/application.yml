@@ -9,9 +9,8 @@ name:
   value: nebrass
 
 spring:
-  cloud:
-    config:
-      override-system-properties: false
+  application:
+    name: order-service  
   sleuth:
     sampler:
       probability: 1
