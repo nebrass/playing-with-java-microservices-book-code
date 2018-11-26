@@ -1,6 +1,6 @@
 package com.targa.labs.myboutique.productservice.domain;
 
-import com.targa.labs.myboutique.commons.domain.AbstractEntity;
+import com.targa.labs.myBoutique.commons.domain.AbstractEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
