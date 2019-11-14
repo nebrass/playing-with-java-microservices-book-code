@@ -1,4 +1,4 @@
-package com.targa.labs.myboutique.commons.domain;
+package com.targa.labs.dev.myboutique.commons.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;

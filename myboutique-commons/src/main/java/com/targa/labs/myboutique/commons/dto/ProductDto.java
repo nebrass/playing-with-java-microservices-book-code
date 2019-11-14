@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.targa.labs.myboutique.commons.dto;
+package com.targa.labs.dev.myboutique.commons.dto;
 
 import java.math.BigDecimal;
 import java.util.Set;
