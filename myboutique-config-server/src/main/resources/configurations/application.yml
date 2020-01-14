@@ -9,8 +9,10 @@ name:
   value: nebrass
 
 spring:
-  application:
-    name: order-service  
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
   sleuth:
     sampler:
       probability: 1

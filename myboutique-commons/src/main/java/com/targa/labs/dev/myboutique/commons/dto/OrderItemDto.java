@@ -7,14 +7,18 @@ package com.targa.labs.dev.myboutique.commons.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
+ *
  * @author n.lamouchi
  */
 @Data
+@NoArgsConstructor
 @AllArgsConstructor
-public class CategoryDto {
+public class OrderItemDto {
     private Long id;
-    private String name;
-    private String description;
+    private Long quantity;
+    private Long productId;
+    private Long orderId;
 }

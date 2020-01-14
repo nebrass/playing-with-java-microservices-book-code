@@ -6,18 +6,14 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
 /**
  * A Review.
  */
 @Data
+@NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = false)
 @Entity
@@ -27,7 +23,7 @@ public class Review extends AbstractEntity {
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @NotNull
@@ -41,10 +37,6 @@ public class Review extends AbstractEntity {
     @NotNull
     @Column(name = "rating", nullable = false)
     private Long rating;
-
-    public Review() {
-        // Empty Constructor for JPA
-    }
 
     public Review(String title, String description, Long rating) {
         this.title = title;

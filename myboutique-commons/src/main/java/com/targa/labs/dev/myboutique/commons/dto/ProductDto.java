@@ -5,25 +5,27 @@
  */
 package com.targa.labs.dev.myboutique.commons.dto;
 
-import java.math.BigDecimal;
-import java.time.ZonedDateTime;
-import java.util.Set;
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.math.BigDecimal;
+import java.util.Set;
 
 /**
- *
  * @author n.lamouchi
  */
 @Data
+@NoArgsConstructor
 @AllArgsConstructor
-public class OrderDto {
+public class ProductDto {
     private Long id;
-    private BigDecimal totalPrice;
+    private String name;
+    private String description;
+    private BigDecimal price;
+    private Integer quantity;
     private String status;
-    private ZonedDateTime shipped;
-    private PaymentDto payment;
-    private AddressDto shipmentAddress;
-    private Set<OrderItemDto> orderItems;
+    private Integer salesCounter;
+    private Set<ReviewDto> reviews;
+    private CategoryDto category;
 }

@@ -7,16 +7,17 @@ package com.targa.labs.dev.myboutique.commons.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * @author n.lamouchi
  */
 @Data
+@NoArgsConstructor
 @AllArgsConstructor
-public class CustomerDto {
+public class ReviewDto {
     private Long id;
-    private String firstName;
-    private String lastName;
-    private String email;
-    private String telephone;
+    private String title;
+    private String description;
+    private Long rating;
 }

@@ -6,6 +6,7 @@ import com.targa.labs.dev.myboutique.productservice.domain.enumeration.ProductSt
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -17,6 +18,7 @@ import java.util.Set;
  * A Product.
  */
 @Data
+@NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = false)
 @Entity
@@ -26,7 +28,7 @@ public class Product extends AbstractEntity {
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @NotNull
@@ -59,13 +61,9 @@ public class Product extends AbstractEntity {
     @ManyToOne
     private Category category;
 
-    public Product() {
-        // Empty Constructor for JPA
-    }
-
     public Product(String name, String description, BigDecimal price,
-            Integer quantity, ProductStatus status,
-            Integer salesCounter, Category category) {
+                   Integer quantity, ProductStatus status,
+                   Integer salesCounter, Category category) {
         this.name = name;
         this.description = description;
         this.price = price;

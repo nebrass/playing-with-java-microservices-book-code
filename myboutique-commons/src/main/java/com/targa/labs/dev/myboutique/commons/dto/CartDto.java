@@ -7,17 +7,17 @@ package com.targa.labs.dev.myboutique.commons.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
- *
  * @author n.lamouchi
  */
 @Data
+@NoArgsConstructor
 @AllArgsConstructor
-public class AddressDto {
-    private String address1;
-    private String address2;
-    private String city;
-    private String postcode;
-    private String country;
+public class CartDto {
+    private Long id;
+    private Long orderId;
+    private CustomerDto customerDto;
+    private String status;
 }

@@ -32,7 +32,7 @@ public class DataLoader implements CommandLineRunner {
                 = this.restTemplate.getForEntity(
                         "http://product-service/api/products/{id}",
                         ProductDto.class,
-                        2
+                        6
                 );
 
         log.error("############  " + productResponseEntity.getBody().toString() + "   ###############");

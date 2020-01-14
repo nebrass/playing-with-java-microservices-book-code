@@ -7,16 +7,17 @@ package com.targa.labs.dev.myboutique.commons.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
- *
  * @author n.lamouchi
  */
-@AllArgsConstructor
 @Data
-public class OrderItemDto {
+@NoArgsConstructor
+@AllArgsConstructor
+public class PaymentDto {
     private Long id;
-    private Long quantity;
-    private Long productId;
+    private String paypalPaymentId;
+    private String status;
     private Long orderId;
 }
